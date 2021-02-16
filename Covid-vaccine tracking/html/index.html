@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid vaccination register form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="container-fluid navbar-light ">
+        <nav class="navbar navbar-expand-lg navbar-light ">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                 <h3>Vaccination</h3>
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+    <section id="login-form" class="col-md-12 pt-5">
+        <div class="wrapper ">
+            <div id="login-cont" class="container">
+                
+                <div class="row ">
+                    <div id="content-block" class="col-lg-6  d-none d-lg-block d-print-block ml-0 ml-0 p-0">
+                        <div class="content">
+                            <img id="vaccine-image-login" class="col-lg-2" src="../assets/images/login-covaxin.jpg">
+    
+                        </div>
+
+                    </div>
+                    <div  id="offset-between"class=" col-lg-1">
+                    </div>
+                    <div class="col-lg-5 card p-4">
+                        <h5 class="">Login </h5>
+                         <form  id="form"  autocomplete="off">
+                            <div class="mb- form-">
+                                <div class="label-layout">
+                                    <label for="exampleInputEmail1" class="form-label">Username</label>
+
+                                </div>
+                                <div class="div">
+                                    <input type="text" id="username"  class="form-control" placeholder="Username" id="exampleInputEmail1" >
+                                    <small></small>
+                                </div>
+                            </div>
+            
+                            <div class="mb-">
+                                <label for="exampleInputPassword1"  class="form-label">Password</label>
+                                <div class="">
+                                    <input type="password" class="form-control" id="password" placeholder="password" id="exampleInputPassword1"  >
+                                    <small></small>
+                                </div>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" >
+                                <label class="form-check-label" id="check-box" for="exampleCheck1">Remember me</label required="false">
+                            </div>
+                            <button type="submit"  id="login-btn" class="btn btn-primary">Login</button>
+                         </form> 
+                    </div>
+
+                </div>
+            </div>
+    
+        </div>
+    </section>
+
+    <div class="container card bg-light p-5 mt-5">
+
+        <div class="col-md  ">
+            <h1 class="col-md align-items-center "> Appoinment for Vaccination </h1>
+            
+        </div>
+        <div class="col-lg-12 well">
+        <div class="row ">
+
+                    <form id="form-second"  class="">
+                        <div  class="col-sm-12">
+                            <div class="">
+
+
+                                 <!-- <div class="col-sm-6 form-control">
+                                    <label>First Name</label>
+                                    <input type="text"  id="fname" class="form-control">
+                                    <small></small>
+                                </div> -->
+
+
+                                 <div class="fname form-group">
+                                    <div class="label-layout">
+                                        <label for="first-name" class="label">First Name</label>
+                                    </div>  
+                                    <input class="form-control" id="fname" type="text" placeholder="Enter the Name" maxlength="25">
+                                    <small></small>
+                                </div>
+
+
+      
+                                <div class="gender form-control">
+                                    <div class="label-layout" id="">
+                                        <label for="gender" class="mobile">Gender</label>
+                                    </div>
+                                    <input class="inp-layout-radio gender"   name="gender" type="radio" value="0" >Male<small>Error message</small></input>
+                                    <input class=" np-layout-radio gender success"   name="gender" type="radio" value="1" >Female<small>Error message</small></input>
+                                    <span  style="visibility: hidden;color:red" id="check-gender">Select any  of the gender</span>
+                                    <b></b>
+                
+                                </div>
+                            </div>	
+                            
+				
+                            <div class="address form-control">
+                                <label> Nearest Locality/Village as per Current Residential Address</label>
+                                <div class="label-layout" id="">
+                                    <label for="City" class="add">City</label>
+                                </div>
+                                <input id="address" type="text" class="inp-layout" maxlength="50">
+                                <small>(Maximum 50 characters)</small>
+            
+                                <p>Maximum 20 characters allowed </p>
+            
+                            </div>
+                        
+
+                                <div class="col-sm form-group">
+                                    <label>Existing disease</label>
+                                    <input type="text" id="existing-disease" placeholder="Enter if any disease is already present.." class="form-control">
+                                    <small></small>
+                                </div>		
+          	 
+                            <div class="col-sm form-group">
+                                <label>Date of birth</label>
+                                <input type="date" placeholder="" id="date-of-birth" class="form-control">
+                                <small></small>
+                            </div>					
+                            <div class="pincode form-control">
+                                <div class="label-layout" id="">
+                                    <label for="Pincode" class="add">Mobile number</label>
+                                </div>
+                                <input id="phone" type="number" class=" inp-layout" maxlength="10">
+                                <b>(Maximun 6 numbers)</b>
+                                <small>(Maximun 6 numbers)</small>
+                            </div>	
+
+
+                            <div class="pincode form-group">
+                                <div class="label-layout" >
+                                    <label for="aadhar" class="add">Aadhar Number</label>
+                                </div>
+                                <input id="aadhar" class="form-control" type="number" class=" inp-layout" maxlength="11">
+                                <b>(AAdhar nuber must be 12 digit)</b>
+                                <small></small>
+                            </div>	
+
+                            <div class="dob form-control">
+                                <div class="label-layout" id="dob">
+                                    <label for="date-of-reg" class="">Date Of Registeration</label>
+                                </div>
+                                    <input id="date-of-reg" class="inp-layout" type="date"  name="birthday">
+                               <small></small>
+                               <p>(Please select today)</p>
+                            </div>
+
+         
+                          <div class=" form-group ">
+                            <div class="">
+                                <input class="form-check-input " id="willing" type="checkbox" value="1"  >
+                                <span  style="visibility: hidden;color:red" id="check-hobbie">Accept the terms and Conditions</span>
+                            </div>
+                            <label >
+                              I certify that I am 18 years of age, I here by consent to the licenced health care provide, to share my health condition which will be used to determie my eligibility for receiving the COVID-19 vaccination.
+                            </label>
+                           
+                        </div> 
+
+                        <button type="submit" id="submit-button" class="btn btn-lg btn-info form-control">Submit</button>					
+                        </div>
+                    </form> 
+                    </div>
+        </div>
+        </div>
+        <hr>
+
+        <footer>
+            <div class="container-fluid  bg-light">
+                <div class="row vcenter">
+                    <div class="pull-left col-lg-12 h-50 ">
+                        <p class="d-flex justify-content-center p-3">Copyright &copy;2021 by Thamizhmani</p>
+                    </div>
+                    <div class="col-lg-4 col-lg-offset-4 col-xs-12">
+                        <div class="pull-right">
+                            <a href="#"><i class="fa fa-behance-square fa-icon"></i></a>
+                            <a href="#"><i class="fa fa-linkedin-square fa-icon"></i></a>
+                            <a href="#"><i class="fa fa-twitter-square fa-icon"></i></a>
+                            <a href="#"><i class="fa fa-skype fa-icon"></i></a>
+                            <a href="#"><i class="fa fa-facebook-square fa-icon"></i></a>
+                            <a href="#"><i class="fa fa-github-square fa-icon"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    <script type="text/javascript" src="../javascript/index-validation.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slot allotment</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/dashboard-content.css">
+    <link rel="stylesheet" href="../css/dashboard-report.css">
+    <link rel="stylesheet" href="../css/health.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header>
+    <nav id="linear-gradient" class="navbar navbar-expand-md  text-dark fixed-top ">
+
+      <div class="d-flex">
+          <div class="collapse navbar-collapse col-md-10" id="navbarCollapse">
+            <a class="navbar-brand" href="#">Vaccination</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"  onclick="openCity(event, 'slot-allotment')"> Slot Allotment</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="openCity(event, 'flaging')">Flag the Vaccinated</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="#" onclick="openCity(event, 'healthcare')" >Health Care Slot Allotment</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="#"  onclick="openCity(event, 'dashboard')"  >Dashboard</a>
+          </li>
+        </ul>
+
+      </div>
+      <div class=" d-flex col-md-2  offset-md-7 ">
+        <a  id="logout"class="btn btn-outline-primary my-2 my-sm-0"  href="index.html" type="submit">Logout</a>
+
+      </div>
+      </div>
+
+    </nav>
+  </header>
+  <div class=" container-fluid p-0">
+
+    <nav id="myHeader"  class="  background transparent navbar-inner navbar navbar-expand-lg navbar-light  bg-light navbar navbar-default navbar-fixed-top">
+      <!-- <a class="navbar-brand text-white" href="#">
+      </a>
+      <button  class="navbar-toggler navbar-light bg-light text-light" type="button" data-toggle="collapse" data-target="#navbarNav" >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="navbar-nav text-light tab">
+          <li class="nav-item">
+              <a class="nav-link text-dark tab-color border-right"  href="#"  onclick="openCity(event, 'slot-allotment')" >Slot Allotment</a>
+            </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark tab-color"  href="#"  onclick="openCity(event, 'flaging')">Vaccination Flag</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark tab-color" href="#" onclick="openCity(event, 'healthcare')"    >Health care Time slot allotment</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark tab-color" href="#"   >Dashboard</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link text-dark btn btn-info" href="index.html">Logout</a>            
+          </li>
+
+        </div>
+      </div> -->
+  
+    </nav>
+
+        <div id="background-attachment" class="">
+         
+            <div class=" tabcontent  card bg-secondary col-lg-9 container   p-4" id="slot-allotment">
+              <h1 class="text-white">Slot Allotment</h1>
+              <form id="slot-allotment"class="needs-validation " novalidate>
+                
+                <div class="form-control">
+                  <label for="exampleFormControlInput1">Name</label>
+                  <input type="email" class="form-control" id="username" placeholder="Enter the name of user">
+                  <small></small>
+                </div>
+                <div class="form-control">
+                  <label for="exampleFormControlInput1">Aadhar No:(Id proof)</label>
+                  <input type="number" class="form-control" id="aadhar-number" placeholder="Enter the Aadhar Number">
+                  <small></small>
+                </div>
+                <div class="form-control">
+                  <label for="exampleFormControlInput1">Date of Birth</label>
+                  <input type="date" class="form-control" id="dob" >
+                  <small></small>
+
+                </div>
+                <div class="form-control">
+                  <label for="">Location</label>
+                  <input type="text" class="" id="location" placeholder="Allot the location" >
+                  <small></small>
+                </div>
+                <div class="form-control">
+                  <label >Available Slots</label>
+                  <select class="form-control " id="time-slot">
+                    <option value="" selected>Allot the time slot </option>
+                    <option value="0">09:30 - 10:30 AM</option>
+                    <option value="1">10:30 - 11:30 AM</option>
+                    <option value="2">12:30 - 01:30 AM</option>
+                    <option value="3">01:30 - 02:30 AM</option>
+                    <option value="4">02:30 - 03:30 AM</option>
+                  </select>
+                  <small></small>
+                </div>
+
+                <button class="btn btn-primary form-control" type="submit">Submit</button> 
+              </form>
+            </div>
+           
+<!-- --------------------------------------------------flaging--------------------------------- -->
+          <div class="">
+            <div class=" tabcontent card bg-secondary col-lg-9 container   p-4" id="flaging">
+              <form id="flag-vaccination">
+                <h1 class="text-white">Flag If the user is vaccinated</h1>
+                <div class="form-control">
+                  <label for="username">Name</label>
+                  <input type="text" class="form-control" id="usernameFlag" placeholder="Enter the name of user">
+                  <small></small>
+                </div>
+                <div class="form-control">
+                  <label for="aadhar-number">Aadhar No:</label>
+                  <input type="number" class="form-control" id="aadhar-number-flag" placeholder="Enter the Aadhar Number">
+                  <small></small>
+                </div>
+                <div class="form-control">
+                  <label for="dob">Date of Birth</label>
+                  <input type="date" class="form-control" id="dobFlag" >
+                  <small></small>
+                </div>
+        
+  
+                
+                <div class=" form-control">
+                  <div class="label-layout" id="ifVaccinated">
+                      <label for="gender" class="mobile">Vaccination Flag</label>
+                      <input class="inp-layout-radio "   name="vaccinated" type="radio" value="1" >Vaccinated</input>
+                      <input class=" inp-layout-radio  success"   name="vaccinated" type="radio" value="0" >Not vaccinated</input>
+                      <span  style="visibility: hidden;color:red" id="check-vaccine">select if vaccinated else  select not vaccinated</span>
+                  </div>
+                  <fieldset>
+                      <legend>(optional)</legend>
+                      <label>Reason for not vaccinated</label>
+                      <input type="text" class="form-control">
+                  </fieldset>
+        
+
+              </div>
+
+
+                <button class="btn btn-primary form-control" type="submit">Submit</button> 
+              </form>
+            </div>
+            <div class="col-md-1 col-md-offset-1"></div>
+ 
+          </div>
+
+          <!-- ------------------------------------health care----------------------- -->
+          <div class="tabcontent  card bg-secondary col-lg-9 container p-4" id="healthcare">
+            <h1 class="text-white">Time slots availabe in the Hospital</h1>
+            <form id="healthForm"class="form-group"> 
+                <div class="label-layout form-control">
+                    <label for="location" class="">Location :</label>
+                    <input type="text" id="healthLocation"class="form-control" >
+                    <small></small>
+                </div>
+                <div class="label-layout form-control">
+                    <label for="location" class="">Date :</label>
+                    <input type="date" id="healthDate"class="form-control" >
+                    <small></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="location" class="">Time slot :</label>
+                    <select id="healthTime" class="inp-layout form-control">
+                        <option class="form-control" value="" disabled="disabled" selected="selected">Select the Time available</option>
+                        <option class="form-control" value="1">9:30 - 10:30 </option>
+                        <option class="form-control" value="2">10:30-11:30</option>
+                       
+                    </select>
+                    <small></small>
+                </div>
+
+                <button type="submit" class="btn btn-primary "> Submit</button>
+
+
+            </form>
+        </div>
+
+                    <!-- ------------------------------------health care----------------------- -->
+
+ <!-- ------------------------------------dashboard----------------------------------------- -->
+ <div id="dashboard"class="tabcontent  col-lg-9 container   ">
+  <!-- <nav class="navbar">
+    <div class="nav_icon" onclick="toggleSidebar()">
+      <i class="fa fa-bars" aria-hidden="true"></i>
+    </div>
+    <div class="navbar__left">
+      
+      <a class="active_link" href="#">Admin</a>
+    </div>
+    <div class="navbar__right">
+      
+      <form class="example"  style="margin:auto;max-width:300px">
+        <input type="text" placeholder="Track here" name="search2">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+  </nav> -->
+
+  <main>
+    <div class="main__container">
+      <!-- MAIN TITLE STARTS HERE -->
+
+      <div class="main__title">
+        <div class="main__greeting">
+          
+          <p>Welcome to The dashboard</p>
+        </div>
+      </div>
+
+      <!-- MAIN TITLE ENDS HERE -->
+
+      <!-- MAIN CARDS STARTS HERE -->
+      <div class="main__cards">
+        <div class="card">
+          <i
+            class="fa fa-user-o fa-2x text-lightblue"
+            aria-hidden="true"
+          ></i>
+          <div class="card_inner">
+            <p class="text-primary-p">Number of People vaccinated</p>
+            <span class="font-bold text-title">20</span>
+          </div>
+        </div>
+        <div class="card">
+          <i
+            class="fa fa-user fa-2x text-yellow"
+            aria-hidden="true"
+          ></i>
+          <div class="card_inner">
+            <p class="text-primary-p">Number of User registered</p>
+            <span class="font-bold text-title">5</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <i class="fa fa-calendar fa-2x text-red" aria-hidden="true"></i>
+          <div class="card_inner">
+            <p class="text-primary-p">Slots Available </p>
+            <span class="font-bold text-title">5</span>
+          </div>
+        </div>
+
+        
+
+        <div class="card">
+          <i
+            class="fa fa-thumbs-up fa-2x text-green"
+            aria-hidden="true"
+          ></i>
+          <div class="card_inner">
+            <p class="text-primary-p">Number of peoples not vaccinated</p>
+            <span class="font-bold text-title">15</span>
+          </div>
+        </div>
+      </div>
+      <!-- MAIN CARDS ENDS HERE -->
+
+      
+      <!-- CHARTS STARTS HERE -->
+      <div class="row col-lg-">
+        <div class=" col-lg-12">
+          <div class="charts__left">
+            <div class="charts_left_title">
+              <table class="content-table">
+                <h5>New user details</h5>
+  
+                <thead>
+                  <tr>
+                    <th>S.NO</th>
+                    <th>Name</th>
+                    <th>Aadhar</th>
+                    <th>Contact</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Thamizh mani</td>
+                    <td>1100-502-2754</td>
+                    <td>9894157424</td>
+                  </tr>
+                  <tr >
+                    <td>2</td>
+                    <td>Naveen</td>
+                    <td>1100-502-2754</td>
+                    <td>9847552487</td>
+                  </tr>
+                  <tr >
+                    <td>3</td>
+                    <td>Uttej</td>
+                    <td>1100-502-2754</td>
+                    <td>6598584512</td>
+                  </tr>
+                  <tr >
+                    <td>4</td>
+                    <td>Darshan</td>
+                    <td>1100-502-2754</td>
+                    <td>9821846745</td>
+                  </tr>
+                  <tr >
+                    <td>5</td>
+                    <td>Srilekha</td>
+                    <td>1100-502-2754</td>
+                    <td>8220853499</td>
+                  </tr>
+  
+                </tbody>
+              </table>
+              </div>
+            
+          </div>
+  
+        
+        </div>
+        <!-- CHARTS ENDS HERE -->
+        <div class=" col-lg-12">
+          <div class="charts__left">
+            <div class="charts_left_title">
+              <table class="col-md content-table">
+                <h5>Slots availablity</h5>
+  
+                <thead>
+                  <tr>
+                    <th>S.NO</th>
+                    <th>Location</th>
+                    <th>Hospital</th>
+                    <th>Date</th>
+                    <th>Slot Time</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Pondicherry</td>
+                    <td>Government Hospital</td>
+                    <td>04/02/2021</td>
+                    <td>09:30 - 10:30 AM</td>
+                  </tr>
+                  <tr >
+                    <td>2</td>
+                    <td>Pondicherry</td>
+                    <td>Government Hospital</td>
+                    <td>04/02/2021</td>
+                    <td>10:30 - 11:30 AM</td>
+                  </tr>
+                  <tr >
+                    <td>3</td>
+                    <td>Yanam</td>
+                    <td>Government Hospital</td>
+                    <td>06/02/2021</td>
+                    <td>11:30 - 01:30 AM</td>
+                  </tr>
+                  <tr >
+                    <td>4</td>
+                    <td>Mahé</td>
+                    <td>Government Hospital</td>
+                    <td>04/02/2021</td>
+                    <td>01:30 - 02:30 AM</td>
+                  </tr>
+                  <tr >
+                    <td>5</td>
+                    <td>Yanam</td>
+                    <td>Government Hospital</td>
+                    <td>05/02/2021</td>
+                    <td>09:30 - 10:30 AM</td>
+                  </tr>
+  
+                </tbody>
+              </table>
+              </div>
+            
+          </div>
+  
+        
+        </div>
+      </div>
+      <!-- -------------------------------------chart ends here (2)--------------------------------     -->
+    </div>
+  </main>
+  </div>
+</div>
+  <!-- ------------------------------------dashboard----------------------------------------- -->
+
+        </div>
+
+    </div>
+
+
+
+    <footer>
+      <div class="container-fluid  bg-light">
+          <div class="row vcenter">
+              <div class="pull-left col-lg-12 h-50 ">
+                  <p class="d-flex justify-content-center p-3">Copyright &copy;2021 by Thamizhmani</p>
+              </div>
+              <div class="col-lg-4 col-lg-offset-4 col-xs-12">
+                  <div class="pull-right">
+                      <a href="#"><i class="fa fa-behance-square fa-icon"></i></a>
+                      <a href="#"><i class="fa fa-linkedin-square fa-icon"></i></a>
+                      <a href="#"><i class="fa fa-twitter-square fa-icon"></i></a>
+                      <a href="#"><i class="fa fa-skype fa-icon"></i></a>
+                      <a href="#"><i class="fa fa-facebook-square fa-icon"></i></a>
+                      <a href="#"><i class="fa fa-github-square fa-icon"></i></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </footer>
+    <script type="text/javascript" src="../javascript/health-care-validation.js"></script>
+
+    <script type="text/javascript" src="../javascript/vaccination-flag-validation.js"></script>
+    <script type="text/javascript" src="../javascript/slot-allotment-validation.js"></script>
+    <!-- <script type="text/javascript" src="../javascript/bootstrap-validation.js"></script> -->
+    <script type="text/javascript" src="../javascript/dashboard.js"></script>
+    <script type="text/javascript" src="../javascript/tab-navigation.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+
+</body>
+</html>
